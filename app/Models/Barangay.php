@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Barangay extends Model
 {
-    protected $fillable = ['municipality_id', 'name', 'latitude', 'longitude', 'household_count'];
+    protected $fillable = ['municipality_id', 'name', 'latitude', 'longitude'];
 
     protected $casts = [
         'latitude'  => 'decimal:7',
