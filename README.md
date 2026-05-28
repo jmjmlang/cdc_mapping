@@ -30,6 +30,23 @@ npm run build
 php artisan serve
 ```
 
+## Laravel Cloud
+
+Recommended Laravel Cloud commands:
+
+```bash
+# Build command
+composer install --no-dev --optimize-autoloader
+npm ci
+npm run build
+php artisan optimize
+
+# Deploy command
+php artisan migrate --force
+```
+
+If you later add user-uploaded files, attach Laravel Cloud Object Storage and set `FILESYSTEM_DISK` to that bucket instead of relying on local disk persistence.
+
 ## Default Admin Account
 
 After seeding, log in with the admin credentials defined in `database/seeders/AdminUserSeeder.php`.
